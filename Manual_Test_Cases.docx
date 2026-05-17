@@ -1,0 +1,35 @@
+| TC ID | Scenario                          | Preconditions               | Steps                                         | Expected Result                                          | Status |
+| ----- | --------------------------------- | --------------------------- | --------------------------------------------- | -------------------------------------------------------- | ------ |
+| TC_01 | Login with valid credentials      | User is on login page       | Enter valid username/password and click Login | User should navigate to Products page                    | Pass   |
+| TC_02 | Login with invalid password       | User is on login page       | Enter valid username and wrong password       | Error message should display                             | Pass   |
+| TC_03 | Login with empty username         | User is on login page       | Leave username blank and click Login          | Validation message should appear                         | Pass   |
+| TC_04 | Login with empty password         | User is on login page       | Leave password blank and click Login          | Validation message should appear                         | Pass   |
+| TC_05 | Login with locked user            | User is on login page       | Use locked_out_user credentials               | User should not login                                    | Pass   |
+| TC_06 | Verify password masking           | User is on login page       | Type password in password field               | Password should appear masked                            | Pass   |
+| TC_07 | Verify products are displayed     | User logged in successfully | Observe products page                         | Product names, prices and images should display properly | Pass   |
+| TC_08 | Verify product sorting (A-Z)      | User logged in              | Select Name A-Z filter                        | Products should sort alphabetically                      | Pass   |
+| TC_09 | Verify product sorting (Low-High) | User logged in              | Select Price Low-High filter                  | Products should sort by price                            | Pass   |
+| TC_10 | Add product to cart               | User logged in              | Click Add to Cart on any product              | Product should be added successfully                     | Pass   |
+| TC_11 | Add multiple products to cart     | User logged in              | Add 2–3 products                              | Cart badge count should update correctly                 | Pass   |
+| TC_12 | Remove product from cart          | Product already added       | Click Remove button                           | Product should be removed from cart                      | Pass   |
+| TC_13 | Verify cart page                  | Product added to cart       | Open cart page                                | Added product should display in cart                     | Pass   |
+| TC_14 | Continue shopping from cart       | User is on cart page        | Click Continue Shopping                       | User should navigate back to products page               | Pass   |
+| TC_15 | Successful checkout               | Product added to cart       | Complete checkout flow with valid details     | Order confirmation should display                        | Pass   |
+| TC_16 | Checkout with empty first name    | User on checkout page       | Leave first name blank and continue           | Validation message should appear                         | Pass   |
+| TC_17 | Checkout with empty postal code   | User on checkout page       | Leave postal code blank and continue          | Validation should display                                | Pass   |
+| TC_18 | Verify checkout cancellation      | User on checkout page       | Click Cancel                                  | User should return to previous page                      | Pass   |
+| TC_19 | Verify logout functionality       | User logged in              | Click Logout from menu                        | User should redirect to login page                       | Pass   |
+| TC_20 | Verify browser back after logout  | User logged out             | Press browser back button                     | User should not access inventory page                    | Fail   |
+
+ADD ONS:
+Cross-Browser Testing
+Tested on Chrome and Edge.
+Login, cart and checkout flow worked properly in both browsers.
+________________________________________
+Responsive / Mobile Testing
+Tested using mobile view (iPhone and Android sizes).
+Application was responsive and usable. Minor UI alignment issues observed on smaller screens.
+________________________________________
+Accessibility Observations
+Basic keyboard navigation worked properly.
+Text and buttons were readable with good visibility.
